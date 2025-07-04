@@ -1,0 +1,16 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 999.99,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 19.99,
+      "category": "Accessories"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ export function showSuccessAlert(title, text) {
   });
 }
 
-export function showErrorAlert(title, text) {
+export function showErrorAlert (title, text) {
   return Swal.fire({
     title,
     text,

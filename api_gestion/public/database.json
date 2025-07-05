@@ -1,16 +1,34 @@
 {
   "productos": [
     {
-      "id": 1,
-      "name": "Laptop",
-      "price": 999.99,
-      "category": "Electronics"
+      "name": "dsakdsa",
+      "price": 515,
+      "category": "Tecnología",
+      "id": "0668"
     },
     {
-      "id": 2,
-      "name": "Mouse",
-      "price": 19.99,
-      "category": "Accessories"
+      "id": "945e",
+      "name": "Laptopy",
+      "price": 805151,
+      "category": "Tecnología"
+    },
+    {
+      "name": "Laptop",
+      "price": 1515,
+      "category": "Tecnología",
+      "id": "750d"
+    },
+    {
+      "id": "81e1",
+      "name": "sajsd",
+      "price": 252,
+      "category": "Tecnología"
+    },
+    {
+      "id": "79e2",
+      "name": "yo",
+      "price": 100,
+      "category": "tu"
     }
   ]
 }

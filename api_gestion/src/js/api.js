@@ -1,8 +1,8 @@
-const API_URL = 'http://localhost:3000/productos';
+const endpoint = 'http://localhost:3000/productos';
 
 export async function getProducts() {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(endpoint);
     if (!response.ok) throw new Error('Failed to load products');
     return await response.json();
   } catch (error) {
@@ -12,7 +12,7 @@ export async function getProducts() {
 
 export async function createProduct(product) {
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)
@@ -26,7 +26,7 @@ export async function createProduct(product) {
 
 export async function updateProduct(id, product) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${endpoint}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)
@@ -40,7 +40,7 @@ export async function updateProduct(id, product) {
 
 export async function deleteProduct(id) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${endpoint}/${id}`, {
       method: 'DELETE'
     });
     if (!response.ok) throw new Error('Failed to delete product');

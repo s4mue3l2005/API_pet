@@ -1,9 +1,10 @@
+/* Estilos base */
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
-  padding: 20px;
-  background: #f4f4f4;
+  background: #2c3333;
   color: #333;
 }
 
@@ -29,10 +30,11 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 30px;
+  padding: 10px;
 }
 
 .form-section, .list-section {
-  background: #fff;
+  background: #395b64;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,7 +42,7 @@ main {
 
 h2 {
   margin-top: 0;
-  color: #2c3e50;
+  color: #f8f9ff;
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
 }
@@ -52,33 +54,50 @@ form {
 
 input {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #a5c9ca;
   border-radius: 4px;
   font-size: 16px;
+  background: #a5c9ca;
 }
 
+/* --- Botones --- */
+
+/* Botón base para todos */
 button {
-  padding: 10px 15px;
-  background: #3498db;
-  color: white;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
+  outline: none;
 }
 
 button:hover {
-  background: #2980b9;
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
+button:active {
+  transform: translateY(-1px);
+}
+
+/* Lista de productos */
 #productList {
   display: grid;
   gap: 15px;
 }
 
 .product {
-  background: #fff;
+  background: #a5c9ca;
   padding: 15px;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -95,31 +114,103 @@ button:hover {
   margin-top: 10px;
 }
 
+/* Botones dentro de acciones de producto */
 .product-actions button {
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 0.8em 2em;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border-radius: 45px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  outline: none;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-.product-actions button:first-child {
-  background: #f39c12;
+/* Botón editar (amarillo) */
+.product-actions .edit-btn {
+  background-color: #f39c12;
+  color: #000;
+  box-shadow: 0px 8px 15px rgba(243, 156, 18, 0.4);
 }
 
-.product-actions button:first-child:hover {
-  background: #e67e22;
+.product-actions .edit-btn:hover {
+  background-color: #e67e22;
+  box-shadow: 0px 15px 20px rgba(230, 126, 34, 0.5);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
-.product-actions button:last-child {
-  background: #e74c3c;
+.product-actions .edit-btn:active {
+  transform: translateY(-1px);
 }
 
-.product-actions button:last-child:hover {
-  background: #c0392b;
+/* Botón eliminar (rojo) */
+.product-actions .delete-btn {
+  background-color: #e74c3c;
+  color: #000;
+  box-shadow: 0px 8px 15px rgba(231, 76, 60, 0.4);
 }
 
+.product-actions .delete-btn:hover {
+  background-color: #c0392b;
+  box-shadow: 0px 15px 20px rgba(192, 57, 43, 0.5);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.product-actions .delete-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Footer */
 footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
   background: #2c3e50;
   color: #fff;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet (768px a 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-section, .list-section {
+    padding: 15px;
+  }
+}
+
+/* Móvil (menos de 768px) */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .form-section, .list-section {
+    padding: 10px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .product-actions button {
+    width: 100%;
+  }
 }

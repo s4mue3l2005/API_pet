@@ -1,120 +1,121 @@
-/* Estilos base */
+/* --- Base Styles --- */
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background: #2c3333;
-  color: #333;
+  font-family: 'Arial', sans-serif; /* Set font for the page */
+  line-height: 1.6;                 /* Improve text readability */
+  margin: 0;                        /* Remove default margin */
+  background: #2c3333;              /* Set background color */
+  color: #333;                      /* Set text color */
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px;                /* Limit width for readability */
+  margin: 0 auto;                   /* Center the container */
+  padding: 0 20px;                  /* Horizontal padding */
 }
 
 header {
-  background: #2c3e50;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  margin-bottom: 30px;
+  background: #2c3e50;             /* Dark background for header */
+  color: #fff;                     /* White text */
+  padding: 20px 0;                 /* Vertical spacing */
+  text-align: center;              /* Centered text */
+  margin-bottom: 30px;             /* Space below header */
 }
 
 header h1 {
-  margin: 0;
+  margin: 0;                       /* Remove default margin */
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 30px;
-  padding: 10px;
+  display: grid;                   /* Use grid layout */
+  grid-template-columns: 1fr 2fr;  /* Two-column layout */
+  gap: 30px;                       /* Space between columns */
+  padding: 10px;                   /* Inner spacing */
 }
 
 .form-section, .list-section {
-  background: #395b64;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #395b64;             /* Card background */
+  padding: 20px;                   /* Inner spacing */
+  border-radius: 8px;              /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 h2 {
-  margin-top: 0;
-  color: #f8f9ff;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  margin-top: 0;                   /* No top margin */
+  color: #f8f9ff;                  /* Light heading */
+  border-bottom: 1px solid #eee;  /* Divider line */
+  padding-bottom: 10px;           /* Space below heading */
 }
 
 form {
-  display: grid;
-  gap: 15px;
+  display: grid;                   /* Use grid for inputs */
+  gap: 15px;                       /* Space between inputs */
 }
 
 input {
-  padding: 10px;
-  border: 1px solid #a5c9ca;
-  border-radius: 4px;
-  font-size: 16px;
-  background: #a5c9ca;
+  padding: 10px;                   /* Inner spacing */
+  border: 1px solid #a5c9ca;       /* Border color */
+  border-radius: 4px;              /* Rounded corners */
+  font-size: 16px;                 /* Readable font size */
+  background: #a5c9ca;             /* Input background */
 }
 
-/* --- Botones --- */
+/* --- Buttons --- */
 
-/* Botón base para todos */
+/* Base button style */
 button {
   padding: 1.3em 3em;
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
+  text-transform: uppercase;       /* Uppercase text */
+  letter-spacing: 2.5px;           /* Spaced letters */
   font-weight: 500;
   color: #000;
   background-color: #fff;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;    /* Smooth animations */
   cursor: pointer;
   outline: none;
 }
 
 button:hover {
-  background-color: #23c483;
+  background-color: #23c483;       /* Green on hover */
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
-  transform: translateY(-7px);
+  transform: translateY(-7px);     /* Lift effect */
 }
 
 button:active {
-  transform: translateY(-1px);
+  transform: translateY(-1px);     /* Pressed effect */
 }
 
-/* Lista de productos */
+/* --- Product List --- */
+
 #productList {
   display: grid;
-  gap: 15px;
+  gap: 15px;                       /* Space between product cards */
 }
 
 .product {
-  background: #a5c9ca;
+  background: #a5c9ca;             /* Product card background */
   padding: 15px;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #3498db;  /* Accent line */
 }
 
 .product p {
-  margin: 5px 0;
+  margin: 5px 0;                   /* Spacing between paragraphs */
 }
 
 .product-actions {
-  display: flex;
+  display: flex;                   /* Horizontal layout */
   gap: 10px;
   margin-top: 10px;
 }
 
-/* Botones dentro de acciones de producto */
+/* Buttons inside product actions */
 .product-actions button {
   padding: 0.8em 2em;
   font-size: 12px;
@@ -129,7 +130,7 @@ button:active {
   cursor: pointer;
 }
 
-/* Botón editar (amarillo) */
+/* --- Edit Button (Yellow) --- */
 .product-actions .edit-btn {
   background-color: #f39c12;
   color: #000;
@@ -147,7 +148,7 @@ button:active {
   transform: translateY(-1px);
 }
 
-/* Botón eliminar (rojo) */
+/* --- Delete Button (Red) --- */
 .product-actions .delete-btn {
   background-color: #e74c3c;
   color: #000;
@@ -165,7 +166,8 @@ button:active {
   transform: translateY(-1px);
 }
 
-/* Footer */
+/* --- Footer --- */
+
 footer {
   text-align: center;
   margin-top: 30px;
@@ -176,10 +178,10 @@ footer {
 
 /* --- Responsive Design --- */
 
-/* Tablet (768px a 1023px) */
+/* Tablet (768px to 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* Single column layout */
     gap: 20px;
   }
 
@@ -188,10 +190,10 @@ footer {
   }
 }
 
-/* Móvil (menos de 768px) */
+/* Mobile (less than 768px) */
 @media (max-width: 767px) {
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* Stack content vertically */
     gap: 15px;
     padding: 5px;
   }
@@ -206,11 +208,11 @@ footer {
   }
 
   .product-actions {
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons vertically */
     gap: 8px;
   }
 
   .product-actions button {
-    width: 100%;
+    width: 100%; /* Full width buttons */
   }
 }
